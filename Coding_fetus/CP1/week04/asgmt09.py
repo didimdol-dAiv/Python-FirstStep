@@ -1,9 +1,9 @@
 #피보나치 수열의 n번째 항 구하기
 n = int(input())
-a = [1, 1]
-t = 2
-for _ in range (n-2):
-    N = a[t-2]+a[t-1]
-    a.append(N)
-    t += 1
-print(a[-1])
+fib = [1, 1]
+count = 2
+for _ in range (n - 2):
+    new = fib[count - 2] + fib[count - 1]
+    fib.append(new)
+    count += 1
+print(fib[-1])
