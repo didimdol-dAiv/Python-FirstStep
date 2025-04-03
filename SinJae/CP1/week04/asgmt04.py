@@ -12,7 +12,7 @@ else:
 while max_exponent >= 0:
     if n >= 2**max_exponent:
         result += "1"
-        n = n - 2**max_exponent
+        n -= 2**max_exponent
     else:
         result += "0"
     max_exponent -= 1
