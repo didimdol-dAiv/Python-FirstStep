@@ -28,18 +28,18 @@ def intresult(N, decimal): #decimal number to base N
 
     if N > 1:
         if decimal:
-            MaxExponent = int(math.log(decimal) / math.log(N)) # N**MaxExponent <= decimal
+            max_exponent = int(math.log(decimal) / math.log(N)) # N**MaxExponent <= decimal
         else:
-            MaxExponent = 0
+            max_exponent = 0
     else:
-        MaxExponent = 1
+        max_exponent = 1
 
-    while MaxExponent >= 0:
-        put_in_number = (decimal // N**MaxExponent)
+    while max_exponent >= 0:
+        put_in_number = (decimal // N**max_exponent)
         result *= 10
         result += put_in_number
-        decimal -= (put_in_number * (N**MaxExponent)) #N진수를 10진수로 변환해서 빼줌
-        MaxExponent = MaxExponent - 1
+        decimal -= (put_in_number * (N**max_exponent)) #N진수를 10진수로 변환해서 빼줌
+        max_exponent -= 1
 
     return result
 
@@ -60,5 +60,7 @@ str로 casting 하지 않고 result에 값 저장하는 방법
 곱하고 더하는 것보다 같거나 더 적은 time compelxity?
 연산 횟수가 한번에서 두번인 방법?
 gpt한테 물어보고싶다
+
+result.insert(-1, put_in_number)
 
 """
