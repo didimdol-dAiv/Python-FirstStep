@@ -18,3 +18,5 @@ while max_exponent >= 0:
     max_exponent -= 1
 
 print(result)
+
+#commit 취소된 코드
