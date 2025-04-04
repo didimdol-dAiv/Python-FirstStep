@@ -11,15 +11,26 @@ def sol1():
 
 
 def sol2():
-    N = int(input())
-    fibo = [1,1]
+    n = int(input())
+    fibo = [1, 1]
 
-    for _ in range(N - 2):
-        t = len(fibo)
-        result = fibo[t-2] + fibo[t-1]
+    for i in range(n-2):
+        result = fibo[i-2] + fibo[i-1]
 
     print(result)
 
 
+def sol3():
+    n = int(input())
+    fibo = [1, 1]
+
+    for i in range(2, n):
+        fibo.append(fibo[i-1] + fibo[i-2])
+
+    print(fibo[-1])
+
+
+
 if __name__ == "__main__":
     sol1()
+    
