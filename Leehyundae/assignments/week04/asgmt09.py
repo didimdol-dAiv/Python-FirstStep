@@ -10,27 +10,19 @@ def sol1():
     print(nsum1)
 
 
+
 def sol2():
     n = int(input())
-    fibo = [1, 1]
 
-    for i in range(n-2):
-        result = fibo[i-2] + fibo[i-1]
-
-    print(result)
-
-
-def sol3():
-    n = int(input())
-    fibo = [1, 1]
-
-    for i in range(2, n):
-        fibo.append(fibo[i-1] + fibo[i-2])
-
-    print(fibo[-1])
+    if n <= 0:
+        print(0)
+    else:
+        fibo = [1, 1]
+        for i in range(2, n):
+            fibo.append(fibo[i-1] + fibo[i-2])
+        print(fibo[-1])
 
 
 
 if __name__ == "__main__":
-    sol1()
-    
+    sol2()
