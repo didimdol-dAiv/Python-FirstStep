@@ -1,9 +1,6 @@
 N = int(input())
 two = ""
-for _ in range(10000000000000):
-    if N < 2:
-        break
+while N > 1:
     two = str(N % 2) + two
     N = N // 2
-two = str(N) + two
-print(two)
+print(str(N) + two)
