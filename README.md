@@ -21,6 +21,7 @@ A repository for learning the fundamentals of programming through Python
 
 ```python
 # 글자 수 세기 함수
+# 승인 완료
 
 def count(word: str, target: str) -> int:
 	return len([char for char in word if char == target])
@@ -53,7 +54,7 @@ memo
 4. fork한 자신의 remote repo에 코드 push
 5. 자신의 repo에서 `contribute` 버튼을 눌러 PR open
 6. PR 설명란에 코드 설명을 상세히 작성 ([PR 과정 가이드](#-pr-과정-가이드) 참고)
-7. PR이 승인되면, comment 확인
+7. PR이 승인되면, comment 확인 후 승인된 파일 상단에 `# 승인 완료` 주석 추가
 8. PR이 거절(Request changes)되면, 수정 사항을 반영한 후 다시 comment 받기
 
 ## 🔧 commit 작성 가이드
@@ -89,7 +90,7 @@ feat: add alternative solution to week00/asgmt00
 ### 1. 새로운 PR 오픈
 #### a. 제목 작성
 ```markdown
-00/00 user-name commit-id 1, commit-id 2, ...
+00/00 user-name file-name 1, file-name 2, ...
 ```
 
 #### b. 양식에 맞추어 문제 풀이 작성
@@ -112,9 +113,9 @@ feat: add alternative solution to week00/asgmt00
 
 #### c. 지난 PR에서 부여받은 Tasks 수행 후 기재 (지난 PR의 식별 번호 넣어서)
 ```markdown
-### 🛠️ 과제 수행 #0000(PR number)
+### 🛠️ 과제 수행 #00(PR number)
 
-#### 1. Task 1: task summary
+#### Task 1(commit-id): task summary (code 관련 사항일 경우 commit id 기재)
 - task 수행 내용 설명
 - task 수행 내용 설명
 ```
@@ -122,7 +123,7 @@ feat: add alternative solution to week00/asgmt00
 #### d. `Preview` 버튼 눌러서 제대로 출력되는지 확인
 
 ### 2. 피드백 반영 (Request changes)
-#### 피드백을 바탕으로 코드 수정 후, 수정한 commit id 기재하여 comment 추가
+#### 피드백을 바탕으로 코드 수정 후, 수정 내용 반영된 commit id 기재하여 comment 추가
 ```markdown
 000000(commit-id)
 
@@ -132,7 +133,7 @@ feat: add alternative solution to week00/asgmt00
 
 ## 👨‍💻 코드 작성 습관
 
-### Reabablity
+### Readability
 - 어떻게 하면 간결한(readable) 코드를 짤 수 있을까?
 - 주석 없이도 동작 과정이 잘 이해되는 코드가 좋은 코드 (타인의 시선에서 작성)
 - 타인의 코드를 읽는 시간 늘리기 → 타인의 경험을 단기간에 습득 가능
