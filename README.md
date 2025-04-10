@@ -133,7 +133,7 @@ feat: add alternative solution to week00/asgmt00
 
 ## 👨‍💻 코드 작성 습관
 
-### Reabablity
+### Readability
 - 어떻게 하면 간결한(readable) 코드를 짤 수 있을까?
 - 주석 없이도 동작 과정이 잘 이해되는 코드가 좋은 코드 (타인의 시선에서 작성)
 - 타인의 코드를 읽는 시간 늘리기 → 타인의 경험을 단기간에 습득 가능
