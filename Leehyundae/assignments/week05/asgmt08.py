@@ -1,16 +1,10 @@
 # softmax 함수
 import math
 
-def softmax(a, b, c):
-    n = [a, b, c]
-    exp_j = 0
+def softmax(*n):
 
-    for j in n:
-            exp_j += math.exp(j)
+    exp_j = sum(math.exp(j) for j in n )
 
-    result = [(math.exp(i) / exp_j) for i in n]
-
-    return result
-
+    return [(math.exp(i) / exp_j) for i in n]
 
 
