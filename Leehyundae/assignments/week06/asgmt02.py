@@ -1,3 +1,3 @@
 #원소 제거기
-def remover(a, b):
-    return [i for i in a if str(i) not in str(b)]
+def remover(origin, remove):
+    return [i for i in origin if str(i) != str(remove)]
