@@ -174,3 +174,7 @@ cython_debug/
 .pypirc
 
 .idea
+
+tmp.py
+temp.py
+prac.py
