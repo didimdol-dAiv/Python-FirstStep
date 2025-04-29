@@ -1,0 +1,7 @@
+[MESSAGES CONTROL]
+
+disable=
+    C0114, # missing-module-docstring
+    C0103, # invalid-name
+    C0116, # missing-function-docstring
+    W0621, # redefined-outer-name
