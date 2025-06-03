@@ -46,6 +46,7 @@ n 번째 걸음 수, n이 인자로 입력됩니다.
 """""""""
 
 def triangular_walk(n: int) -> tuple[int, int]:
+
     line = 0
     card = 0
     while card < n:
