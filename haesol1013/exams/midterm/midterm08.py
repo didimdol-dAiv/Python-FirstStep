@@ -54,9 +54,15 @@ midterm08.png
 
 from math import *
 
+
 def function(func='y=x', x=0):
     return eval(func.split('y=')[1])
 
+
+def function(func='y=x', x=0):
+    return eval(func.split('y=')[1])
+
+  
 def differential(func,x):
     return (function(func, x + 1e-8) - function(func, x)) / 1e-8
 
