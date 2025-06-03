@@ -47,21 +47,22 @@ n 번째 걸음 수, n이 인자로 입력됩니다.
 
 def triangular_walk(n: int) -> tuple[int, int]:
     line = 0
-    card = 0
-    while card < n:
+    total_step = 0
+    while total_step < n:
         line += 1
-        card += line
+        total_step += line
         
-    pre_card = card - line
+    prev_step = total_step - line
+    curr_step = n - prev_step
     if line % 2 == 0:
-        x = n - pre_card
-        y = card - n + 1
+        row = curr_step
+        col = line - curr_step + 1
     else:
-        x = card - n + 1
-        y = n - pre_card
-    return x, y
+        row = line - curr_step + 1
+        col = curr_step
+    return row, col
 
 
 if __name__ == "__main__":
-    arg1 = int(input())
-    print(triangular_walk(arg1))
+    target_step = int(input())
+    print(triangular_walk(target_step))
