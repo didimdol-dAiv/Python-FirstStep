@@ -110,25 +110,23 @@ B=[
 
 def spiral_product(mat_a, mat_b):
     width = len(mat_a[0])
-    arr1 = []
-    for row in mat_a:
-        arr1.extend(row)
+    arr_a = [element for row in mat_a for element in row]
 
-    arr2 = []
+    arr_b = []
     for i in range(width):
         for y in range(i, width-i):
-            arr2.append(mat_b[i][y])
+            arr_b.append(mat_b[i][y])
         for x in range(i+1, width-i-1):
-            arr2.append(mat_b[x][width-i-1])
+            arr_b.append(mat_b[x][width-i-1])
         for y in range(i, width-i):
-            arr2.append(mat_b[width-i-1][width-y-1])
-        for x in range(1+i, width-1-i):
-            arr2.append(mat_b[width-x-1][i])
+            arr_b.append(mat_b[width-i-1][width-y-1])
+        for x in range(i+1, width-i-1):
+            arr_b.append(mat_b[width-x-1][i])
     if width % 2:
-        arr2.pop()
+        arr_b.pop()
 
-    tmp = [i*j for i, j in zip(arr1, arr2)]
-    return [tmp[i*width:width+i*width] for i in range(width)]
+    product_generator = (elem_a * elem_b for elem_a, elem_b in zip(arr_a, arr_b))
+    return [[next(product_generator) for _ in range(width)] for _ in range(width)]
 
 
 if __name__ == "__main__":
