@@ -64,5 +64,5 @@ def triangular_walk(n: int) -> tuple[int, int]:
 
 
 if __name__ == "__main__":
-    target_step = int(input())
-    print(triangular_walk(target_step))
+    arg1 = int(input())
+    print(triangular_walk(arg1))
