@@ -8,6 +8,7 @@ def product(arr: list, r: int=None):
                 yield from _backtrack(curr+[v], remain[:i]+remain[i:])
     yield from _backtrack([], arr)
 
+
 def permutations(arr: list, r: int=None):
     r = r if r else len(arr)
     def _backtrack(curr, remain):
