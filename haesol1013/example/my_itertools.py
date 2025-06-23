@@ -5,7 +5,7 @@ def product(arr: list, r: int=None):
             yield tuple(curr)
         for i, v in enumerate(remain):
             if len(curr) < r:
-                yield from _backtrack(curr+[v], remain[:i]+remain[i:])
+                yield from _backtrack(curr+[v], remain)
     yield from _backtrack([], arr)
 
 
