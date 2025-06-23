@@ -15,7 +15,8 @@ def permutations(arr: list, r: int=None):
         if len(curr) == r:
             yield tuple(curr)
         for i, v in enumerate(remain):
-            yield from _backtrack(curr+[v], remain[:i]+remain[i+1:])
+            if len(curr) < r:
+                yield from _backtrack(curr+[v], remain[:i]+remain[i+1:])
     yield from _backtrack([], arr)
 
 
@@ -25,7 +26,8 @@ def combinations(arr: list, r: int=None):
         if len(curr) == r:
             yield tuple(curr)
         for i, v in enumerate(remain):
-            yield from _backtrack(curr+[v], remain[i+1:])
+            if len(curr) < r:
+                yield from _backtrack(curr+[v], remain[i+1:])
     yield from _backtrack([], arr)
 
 
