@@ -46,20 +46,15 @@ if __name__ == "__main__":
     arg = list(map(int, input().split()))
     repeat = int(input())
 
-    for prod in product(arg, repeat):
-        print(prod)
-    print("-----------------------")
+    functions = (
+        product,
+        permutations,
+        combinations,
+        combinations_with_replacement
+    )
 
-    for perm in permutations(arg, repeat):
-        print(perm)
-    print("-----------------------")
-
-    for comb in combinations(arg, repeat):
-        print(comb)
-    print("-----------------------")
-
-    for comb in combinations_with_replacement(arg, repeat):
-        print(comb)
-    print("-----------------------")
-
-
+    for func in functions:
+        print("-----------------------")
+        print(func.__name__)
+        for prod in func(arg, repeat):
+            print(prod)
